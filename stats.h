@@ -37,5 +37,11 @@
  */
 unsigned char find_mean(unsigned char[]);
 
+unsigned char find_minimum(unsigned char[]);
+
+unsigned char find_maximum(unsigned char[]);
+
+
+
 
 #endif /* __STATS_H__ */

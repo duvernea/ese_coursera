@@ -38,6 +38,12 @@ void main() {
   /* Statistics and Printing Functions Go Here */
     unsigned char mean = find_mean(test);
     printf("mean: %u\n", mean);
+
+    unsigned char min = find_minimum(test);
+    printf("min: %u\n", min);
+
+    unsigned char max = find_maximum(test);
+    printf("max: %u\n", max);
 }
 
 /* Add other Implementation File Code Here */
@@ -57,5 +63,27 @@ unsigned char find_mean(unsigned char numbers[]) {
   // unsigned char mean = (unsigned char) sum / SIZE;
 
 	return mean;
+}
 
+unsigned char find_minimum(unsigned char numbers[]) {
+
+  unsigned int min = numbers[0];
+  
+  for (int i=1; i<SIZE; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+  }
+  return min;
+}
+unsigned char find_maximum(unsigned char numbers[]) {
+
+  unsigned int max = numbers[0];
+  
+  for (int i=1; i<SIZE; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
