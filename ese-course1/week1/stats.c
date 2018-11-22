@@ -26,6 +26,7 @@
 /* Size of the Data Set */
 #define SIZE (40)
 
+
 void main() {
 
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
@@ -45,11 +46,14 @@ void main() {
     unsigned char max = find_maximum(test);
     printf("max: %u\n", max);
 
-    print_array(test);
+    // print_array(test);
 
-    sort_array(test);
+    // sort_array(test);
 
-    print_array(test);
+    // print_array(test);
+
+    unsigned char median = find_median(test);
+    printf("median: %u\n", median);
 
 }
 
@@ -116,4 +120,19 @@ void print_array(unsigned char numbers[]) {
     printf("%u, ", numbers[i]);
   }
   printf("\n");
+}
+unsigned char find_median(unsigned char numbers[]) {
+  unsigned char temp[SIZE];
+  for (int i=0; i<SIZE; i++) {
+    temp[i] = numbers[i];
+  }
+  sort_array(temp);
+  unsigned char median;
+  if (SIZE % 2 == 0) {
+    median = (temp[SIZE/2] + temp[SIZE/2-1]) / 2;
+  } else {
+    median = temp[SIZE/2];
+  }
+
+  return median;
 }
