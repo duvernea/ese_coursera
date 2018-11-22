@@ -41,6 +41,12 @@ unsigned char find_minimum(unsigned char[]);
 
 unsigned char find_maximum(unsigned char[]);
 
+void sort_array(unsigned char[]);
+
+void print_array(unsigned char[]);
+
+
+
 
 
 

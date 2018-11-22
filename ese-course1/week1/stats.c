@@ -44,6 +44,13 @@ void main() {
 
     unsigned char max = find_maximum(test);
     printf("max: %u\n", max);
+
+    print_array(test);
+
+    sort_array(test);
+
+    print_array(test);
+
 }
 
 /* Add other Implementation File Code Here */
@@ -86,4 +93,27 @@ unsigned char find_maximum(unsigned char numbers[]) {
     }
   }
   return max;
+}
+void sort_array(unsigned char numbers[]) {
+  // array is sorted in place. no need for return
+  // bubblesort
+  int swap;
+  for (int i=0; i<SIZE-1; i++) {
+    for (int j=0; j<SIZE-i-1; j++) {
+      if (numbers[j] < numbers[j+1]) {
+        unsigned char temp = numbers[j];
+        numbers[j] = numbers[j+1];
+        numbers[j+1] = temp;
+
+      }
+
+    }
+  } 
+}
+
+void print_array(unsigned char numbers[]) {
+  for (int i=0; i< SIZE; i++) {
+    printf("%u, ", numbers[i]);
+  }
+  printf("\n");
 }
