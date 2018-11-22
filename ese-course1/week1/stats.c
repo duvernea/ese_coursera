@@ -37,23 +37,9 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-    unsigned char mean = find_mean(test);
-    printf("mean: %u\n", mean);
 
-    unsigned char min = find_minimum(test);
-    printf("min: %u\n", min);
+  print_statistics(test);
 
-    unsigned char max = find_maximum(test);
-    printf("max: %u\n", max);
-
-    // print_array(test);
-
-    // sort_array(test);
-
-    // print_array(test);
-
-    unsigned char median = find_median(test);
-    printf("median: %u\n", median);
 
 }
 
@@ -135,4 +121,18 @@ unsigned char find_median(unsigned char numbers[]) {
   }
 
   return median;
+}
+
+void print_statistics(unsigned char numbers[]) {
+  unsigned char mean = find_mean(numbers);
+  printf("mean: %u\n", mean);
+
+  unsigned char min = find_minimum(numbers);
+  printf("min: %u\n", min);
+
+  unsigned char max = find_maximum(numbers);
+  printf("max: %u\n", max);
+
+  unsigned char median = find_median(numbers);
+  printf("median: %u\n", median);
 }

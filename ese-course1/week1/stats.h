@@ -47,10 +47,6 @@ void sort_array(unsigned char[]);
 
 void print_array(unsigned char[]);
 
-
-
-
-
-
+void print_statistics(unsigned char[]);
 
 #endif /* __STATS_H__ */
